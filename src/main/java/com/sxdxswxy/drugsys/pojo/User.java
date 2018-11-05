@@ -1,91 +1,53 @@
 package com.sxdxswxy.drugsys.pojo;
 
-public class User {
+import com.sxdxswxy.drugsys.common.pojo.BasePojo;
 
-    private int id;
-    private String name;
-    private int age;
-    private char sex;
-    private int number;
-    private String proClass;
-    private String address;
+public class User extends BasePojo {
 
-    public User(int id, String name, int age, char sex, int number, String proClass, String address) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.sex = sex;
-        this.number = number;
-        this.proClass = proClass;
-        this.address = address;
+    private int userId;
+    private String userName;
+    private String userPwd;
+    private String userNum;
+
+    public int getUserId() {
+        return userId;
     }
 
-    public int getId() {
-        return id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getUserName() {
+        return userName;
     }
 
-    public String getName() {
-        return name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getUserPwd() {
+        return userPwd;
     }
 
-    public int getAge() {
-        return age;
+    public void setUserPwd(String userPwd) {
+        this.userPwd = userPwd;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public String getUserNum() {
+        return userNum;
     }
 
-    public char getSex() {
-        return sex;
-    }
-
-    public void setSex(char sex) {
-        this.sex = sex;
-    }
-
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public String getProClass() {
-        return proClass;
-    }
-
-    public void setProClass(String proClass) {
-        this.proClass = proClass;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
+    public void setUserNum(String userNum) {
+        this.userNum = userNum;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", sex=" + sex +
-                ", number=" + number +
-                ", proClass='" + proClass + '\'' +
-                ", address='" + address + '\'' +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", userPwd='" + userPwd + '\'' +
+                ", userNum='" + userNum + '\'' +
                 '}';
     }
 
