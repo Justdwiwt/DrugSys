@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/title.css}" href="../static/css/title.css">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" th:href="@{/css/bootstrap-theme.css}" href="../static/css/bootstrap-theme.css">
+    <link rel="stylesheet" th:href="@{/css/font-awesome.css}" href="../static/css/font-awesome.css">
+    <script type="text/javascript" th:src="@{/js/bootstrap.js}" src="../static/js/bootstrap.js"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-1.4.2.js}" src="../static/js/jquery-1.4.2.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" th:fragment="title">
+    <div>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <!--<img alt="logo" src="../static/img" class="fa fa-yahoo">-->
+                <i class="fa fa-eercast fa-2x" style="color: #fff"></i>
+            </a>
+        </div>
+    </div>
+    <ul class="nav nav-pills pull-right">
+        <li><a href="#" class="navbar-btn nav-btn">登录</a></li>
+        <li><a href="#" class="navbar-btn nav-btn">注册</a></li>
+    </ul>
+</div>
+</body>
+</html>
