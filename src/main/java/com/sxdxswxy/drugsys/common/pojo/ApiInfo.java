@@ -5,6 +5,11 @@ import springfox.documentation.service.VendorExtension;
 
 import java.util.List;
 
+/**
+ * 页面展示的基本信息pojo
+ *
+ * @author Justdwiwt
+ */
 public class ApiInfo {
 
     private static final Contact DEFAULT_CONTACT = new Contact("", "", "");

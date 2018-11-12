@@ -113,13 +113,7 @@
             <version>2.6.0</version>
         </dependency>
 
-        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.csource/fastdfs-client-java &ndash;&gt;-->
-        <!--<dependency>-->
-        <!--<groupId>org.csource</groupId>-->
-        <!--<artifactId>fastdfs-client-java</artifactId>-->
-        <!--<version>1.27-RELEASE</version>-->
-        <!--</dependency>-->
-
+        <!--集成 Swagger 2.X-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
