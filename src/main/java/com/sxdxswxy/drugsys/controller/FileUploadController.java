@@ -58,7 +58,7 @@ public class FileUploadController {
             // Get the file and save it somewhere
             byte[] bytes = file.getBytes();
             // UPLOADED_FOLDER 文件本地存储地址
-            Path path = Paths.get("D:\\BIG\\DrugSys\\src\\main\\resources\\file\\upload\\"
+            Path path = Paths.get("E:\\workspace\\idea\\DrugSys\\src\\main\\resources\\file\\upload\\"
                     + file.getOriginalFilename());
             Files.write(path, bytes);
 
