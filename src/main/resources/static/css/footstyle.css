@@ -130,7 +130,11 @@ a > twitter:hover {
     color: #00b4ef;
 }
 
-a linkedIn:hover {
+a > facebook:hover {
+    color: #3c49ff;
+}
+
+a > linkedIn:hover {
     color: #1474ef;
 }
 
