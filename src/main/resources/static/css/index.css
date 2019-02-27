@@ -1,0 +1,9 @@
+.foot-body {
+    margin-bottom: 0;
+}
+
+.nav-body {
+    background-color: #000;
+    opacity: 0.9;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, .5);
+}

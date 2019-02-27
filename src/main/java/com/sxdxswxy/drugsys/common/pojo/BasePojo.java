@@ -1,5 +1,8 @@
 package com.sxdxswxy.drugsys.common.pojo;
 
+import lombok.Data;
+import lombok.ToString;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -8,6 +11,8 @@ import java.util.Date;
  *
  * @author Justdwiwt
  */
+@Data
+@ToString
 public class BasePojo implements Serializable {
 
     private Date createdDate;
@@ -18,13 +23,6 @@ public class BasePojo implements Serializable {
 
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
-    }
-
-    @Override
-    public String toString() {
-        return "BasePojo{" +
-                "createdDate=" + createdDate +
-                '}';
     }
 
 }
