@@ -92,6 +92,7 @@ public class HttpClient {
      *
      * @return builder对象
      */
+    @SuppressWarnings("deprecation")
     @Bean(name = "builder")
     public RequestConfig.Builder getBuilder() {
         RequestConfig.Builder builder = RequestConfig.custom();
