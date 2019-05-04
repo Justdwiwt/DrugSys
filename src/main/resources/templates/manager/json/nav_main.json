@@ -1,112 +1,63 @@
 {
   "data": [
     {
-      "text": "功能页",
-      "icon": "&#xe620;",
+      "text": "用户管理",
+      "icon": "&#xe770;",
       "subset": [
         {
-          "text": "功能页",
-          "icon": "&#xe621;",
+          "text": "用户信息",
+          "icon": "&#xe63c;",
           "href": "demo/btn.html"
         },
         {
-          "text": "功能页",
-          "icon": "&#xe621;",
+          "text": "权限设置",
+          "icon": "&#xe631;",
           "href": "demo/form.html"
-        },
-        {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "href": "demo/table.html"
-        },
-        {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "href": "demo/tab-card.html"
-        },
-        {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "href": "demo/progress-bar.html"
-        },
-        {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "href": "demo/folding-panel.html"
-        },
-        {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "href": "demo/auxiliar.html"
-        },
-        {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "target": true,
-          "href": "http://www.layui.com/demo/"
         }
       ]
     },
     {
-      "text": "功能页",
+      "text": "药品管理",
       "icon": "&#xe628;",
       "href": "",
       "subset": [
         {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "href": "demo/login.html"
+          "text": "类别管理",
+          "icon": "&#xe63c;",
+          "href": "demo/type.html"
         },
         {
-          "text": "功能页",
-          "icon": "&#xe621;",
+          "text": "销售管理",
+          "icon": "&#xe63c;",
           "href": "demo/login2.html"
         },
         {
-          "text": "功能页",
-          "icon": "&#xe621;",
+          "text": "入库管理",
+          "icon": "&#xe63c;",
           "href": "demo/register.html"
-        },
-        {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "href": "demo/map.html"
-        },
-        {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "href": "demo/add-edit.html"
-        },
-        {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "href": "demo/data-table.html"
-        },
-        {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "href": "demo/tree-table.html"
-        },
-        {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "href": "demo/404.html"
-        },
-        {
-          "text": "功能页",
-          "icon": "&#xe621;",
-          "href": "demo/tips.html"
         }
       ]
     },
     {
-      "text": "功能页",
-      "icon": "&#xe638;",
-      "href": "demo/children.html"
+      "text": "数据统计",
+      "icon": "&#xe629;",
+      "href": "demo/children.html",
+      "subset": [
+        {
+          "text": "销售统计",
+          "icon": "&#xe62c;",
+          "href": "demo/children.html"
+        },
+        {
+          "text": "病因统计",
+          "icon": "&#xe62c;",
+          "href": "demo/children.html"
+        }
+      ]
     },
     {
-      "text": "功能页",
-      "icon": "&#xe601;",
+      "text": "消息发布",
+      "icon": "&#xe609;",
       "target": true,
       "href": ""
     }

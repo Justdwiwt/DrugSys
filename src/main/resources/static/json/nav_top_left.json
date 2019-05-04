@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "text": "功能页",
+      "icon": "&#xe621;",
+      "href": "demo/btn.html"
+    },
+    {
+      "text": "功能页",
+      "icon": "&#xe620;",
+      "subset": [
+        {
+          "text": "功能页",
+          "icon": "&#xe621;",
+          "href": "demo/btn.html"
+        },
+        {
+          "text": "功能页",
+          "icon": "&#xe621;",
+          "href": "demo/form.html"
+        }
+      ]
+    }
+  ]
+}

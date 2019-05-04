@@ -16,7 +16,7 @@ import java.nio.file.Paths;
  *
  * @author Justdwiwt
  */
-@Controller
+//@Controller
 public class FileUploadController {
 
     /**

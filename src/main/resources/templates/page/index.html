@@ -23,8 +23,27 @@
             $('#myCarousel').carousel({interval: 2000});
         });
     </script>
+    <style>
+        .nav-logo {
+            width: 50px;
+            height: 50px;
+            margin-top: -15px;
+        }
+
+        .element::-webkit-scrollbar {
+            width: 0 !important;
+            -ms-overflow-style: none;
+            overflow: -moz-scrollbars-none;
+        }
+
+        .text-overflow {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
 </head>
-<body>
+<body class="element">
 <!--nav start-->
 <nav class="navbar navbar-inverse navbar-fixed-top nav-body">
     <div class="container-fluid">
@@ -38,8 +57,8 @@
             </button>
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
-                    <!--<img alt="logo" src="../static/img" class="fa fa-yahoo">-->
-                    <i class="fa fa-edge fa-2x" style="color: #fff"></i>
+                    <img alt="logo" src="../../static/img/W.png" class="fa fa-yahoo nav-logo">
+                    <!--<i class="fa fa-edge fa-2x" style="color: #fff"></i>-->
                 </a>
             </div>
         </div>
@@ -133,74 +152,58 @@
     <div class="container">
         <div class="row">
             <div class="row-content col-lg-2 col-sm-4 col-xs-6">
-                <h3>Subscribe</h3>
+                <h3>便捷功能</h3>
                 <ul>
-                    <li><a href="#">Newsletter</a></li>
-                    <li><a href="#">RSS feed</a></li>
-                    <li><a href="#">RSS to Email</a></li>
-                    <li><a href="#">Product Hunt</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Pinterest</a></li>
-                    <li><a href="#">Google+</a></li>
+                    <li><a href="http://www.bcsxu.edu.cn/xxgkzl/">信息公开</a></li>
+                    <li><a href="http://www.bcsxu.edu.cn/jwc/zlgc/">专业建设</a></li>
+                    <li><a href="http://www.bcsxu.edu.cn/jxpt/">教学平台</a></li>
+                    <li><a href="http://xsjf.sxdxswxy.com/dsh/">网上缴费</a></li>
+                    <li><a href="http://xjxl.chsi.com.cn/">学籍查询</a></li>
                 </ul>
             </div>
-            <div class="row-content col-lg-2 col-sm-4 col-xs-6">
-                <h3>BROWSE</h3>
+            <div class="row-content col-lg-2 col-sm-4 col-xs-6 text-overflow">
+                <h3>上级部门</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Templates</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">OPL Themes</a></li>
+                    <li><a href="http://www.sxu.edu.cn">山西大学</a></li>
+                    <li><a href="http://jyt.shanxi.gov.cn">山西省教育厅</a></li>
+                    <li><a href="http://www.sxco-op.gov.cn">山西省供销合作社联合社</a></li>
                 </ul>
             </div>
-            <div class="row-content col-lg-2 col-sm-4 col-xs-6">
-                <h3>INFORMATION</h3>
+            <div class="row-content col-lg-2 col-sm-4 col-xs-6 text-overflow">
+                <h3>教育部相关</h3>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Why One Page?</a></li>
-                    <li><a href="#">OPL Blog</a></li>
-                    <li><a href="#">Product Hunt</a></li>
-                    <li><a href="#">Advertise</a></li>
-                    <li><a href="#">Submit</a></li>
-                    <li><a href="#">Award Ribbons</a></li>
-                    <li><a href="#">Roadmap</a></li>
+                    <li><a href="http://www.edu.cn">中国教育科研网</a></li>
+                    <li><a href="http://www.chinadegrees.cn">中国学位与研究生教育信息网</a></li>
                 </ul>
             </div>
 
-            <div class="row-content col-lg-2 col-sm-4 col-xs-6">
-                <h3>RESOURCES</h3>
+            <div class="row-content col-lg-2 col-sm-4 col-xs-60 text-overflow">
+                <h3>独立学院</h3>
                 <ul>
-                    <li><a href="#">Browse All</a></li>
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Development</a></li>
-                    <li><a href="#">Hosting</a></li>
-                    <li><a href="#">Round Ups</a></li>
-                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="http://www.jluzh.com/">吉林大学珠海学院</a></li>
+                    <li><a href="http://www.scujj.edu.cn/">四川大学锦江学院</a></li>
+                    <li><a href="http://www.ynnubs.com/">云南师范大学商学院</a></li>
+                    <li><a href="http://www.bnuz.edu.cn/">北京师范大学珠海分校</a></li>
+                    <li><a href="http://www.city.wust.edu.cn">武汉科技大学城市学院</a></li>
                 </ul>
 
             </div>
             <div class="row-content col-lg-2 col-sm-4 col-xs-6">
-                <h3>TRENDING</h3>
+                <h3>山西高校</h3>
                 <ul>
-                    <li><a href="#">Big Typography</a></li>
-                    <li><a href="#">Free Templates</a></li>
-                    <li><a href="#">Most Loved</a></li>
-                    <li><a href="#">Centrally Divided</a></li>
-                    <li><a href="#">Skrollr.js</a></li>
-                    <li><a href="#">Parallax Scrolling</a></li>
-                    <li><a href="#">Off-Canvas Menu</a></li>
-                    <li><a href="#">Molecules</a></li>
+                    <li><a href="http://www.sxu.edu.cn">山西大学</a></li>
+                    <li><a href="http://www.tyut.edu.cn">太原理工大学</a></li>
+                    <li><a href="http://www.nuc.edu.cn">中北大学</a></li>
+                    <li><a href="http://www.tyust.edu.cn">太原科技大学</a></li>
                 </ul>
             </div>
             <div class="row-content col-lg-2 col-sm-4 col-xs-6">
-                <h3>OPL THEMES</h3>
+                <h3>技术支持</h3>
                 <ul>
-                    <li><a href="#">Browse All</a></li>
-                    <li><a href="#">East Java</a></li>
-                    <li><a href="#">Clutterless</a></li>
-                    <li><a href="#">Mapped</a></li>
+                    <li><a href="https://jquery.com/">jQuery</a></li>
+                    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+                    <li><a href="https://www.thymeleaf.org/">Thymeleaf</a></li>
+                    <li><a href="https://spring.io/projects/spring-boot/">Spring Boot</a></li>
                 </ul>
             </div>
 
@@ -210,27 +213,27 @@
     <!-- 社交图标列表，其中图标采用的是Font Awesome图标字体库-->
     <ul class="social">
         <li>
-            <a href="#" title="Twitter Profile">
-                <twitter><span class="icon fa fa-twitter fa-2x to_rotate"></span></twitter>
+            <a href="https://www.sina.com.cn/" title="Weibo Profile">
+                <twitter><span class="icon fa fa-weibo fa-2x to_rotate"></span></twitter>
             </a>
         </li>
         <li>
-            <a href="#" title="Facebook Page">
-                <facebook><span class="icon fa fa-facebook fa-2x to_rotate"></span></facebook>
+            <a href="https://www.qq.com/" title="QQ Page">
+                <facebook><span class="icon fa fa-qq fa-2x to_rotate"></span></facebook>
             </a>
         </li>
         <li>
-            <a href="#" title="LinkedIn Profile">
+            <a href="https://cn.linkedin.com/" title="LinkedIn Profile">
                 <linkedIn><span class="icon fa fa-linkedin fa-2x to_rotate"></span></linkedIn>
             </a>
         </li>
         <li>
-            <a href="#" title="Goole+ Profile">
-                <google><span class="icon fa fa-google fa-2x to_rotate"></span></google>
+            <a href="https://wx.qq.com/" title="WeChat Profile">
+                <google><span class="icon fa fa-wechat fa-2x to_rotate"></span></google>
             </a>
         </li>
         <li>
-            <a href="#" title="Github Profile">
+            <a href="https://github.com/" title="Github Profile">
                 <github><span class="icon fa fa-github fa-2x to_rotate"></span></github>
             </a>
         </li>

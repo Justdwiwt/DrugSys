@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "text": "用户管理",
+      "icon": "&#xe770;",
+      "subset": [
+        {
+          "text": "用户信息",
+          "icon": "&#xe63c;",
+          "href": "demo/btn.html"
+        },
+        {
+          "text": "权限设置",
+          "icon": "&#xe631;",
+          "href": "demo/form.html"
+        }
+      ]
+    },
+    {
+      "text": "药品管理",
+      "icon": "&#xe628;",
+      "href": "",
+      "subset": [
+        {
+          "text": "类别管理",
+          "icon": "&#xe63c;",
+          "href": "demo/login.html"
+        },
+        {
+          "text": "销售管理",
+          "icon": "&#xe63c;",
+          "href": "demo/login2.html"
+        },
+        {
+          "text": "入库管理",
+          "icon": "&#xe63c;",
+          "href": "demo/register.html"
+        }
+      ]
+    },
+    {
+      "text": "数据统计",
+      "icon": "&#xe629;",
+      "href": "demo/children.html",
+      "subset": [
+        {
+          "text": "销售统计",
+          "icon": "&#xe62c;",
+          "href": "demo/children.html"
+        },
+        {
+          "text": "病因统计",
+          "icon": "&#xe62c;",
+          "href": "demo/children.html"
+        }
+      ]
+    },
+    {
+      "text": "消息发布",
+      "icon": "&#xe609;",
+      "target": true,
+      "href": ""
+    }
+  ]
+}

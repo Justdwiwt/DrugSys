@@ -1,20 +1,34 @@
 package com.sxdxswxy.drugsys.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.Date;
 import java.util.List;
 
+@Slf4j
 @Controller
-@RequestMapping("/index")
+@RequestMapping("/")
 public class IndexController {
+
+    @RequestMapping("manager")
+    public String toIndexPage() {
+        return "manager/index";
+    }
+
+    @RequestMapping("main")
+    public String toMainPage() {
+        return "manager/demo/welcome";
+    }
 
 //    @RequestMapping("/login")
 //    public String login(@Valid LoginParam loginParam, BindingResult result, ModelMap model, HttpServletRequest request) {

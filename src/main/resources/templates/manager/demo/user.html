@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+    <link rel="stylesheet" href="./../frame/layui/css/layui.css" th:href="@{/frame/layui/css/layui.css}">
+    <link rel="stylesheet" href="../frame/static/css/style.css"
+          th:href="@{/frame/static/css/style.css}">
+</head>
+<body>
+<div>
+    <span class="layui-breadcrumb">
+        <a href="#">一级</a>
+        <a href="#">二级</a>
+        <a href="#">三级</a>
+        <a><cite>当前</cite></a>
+    </span>
+</div>
+<div class="layui-collapse layui-col-xs9 layui-col-md9 layui-col-lg9" lay-accordion>
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">筛选</h2>
+        <div class="layui-colla-content layui-show">内容区域</div>
+    </div>
+</div>
+<script type="text/javascript" src="./../frame/layui/layui.js" th:src="@{/frame/layui/layui.js}"></script>
+<script type="text/javascript">
+    layui.use('element', function () {
+        var element = layui.element;
+
+        element.on('nav(demo)', function (elem) {
+            layer.msg(elem.text());
+        });
+
+    });
+</script>
+</body>
+</html>
