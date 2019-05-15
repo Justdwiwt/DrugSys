@@ -12,7 +12,7 @@
         {
           "text": "权限设置",
           "icon": "&#xe631;",
-          "href": "demo/form.html"
+          "href": "demo/btn.html"
         }
       ]
     },
@@ -29,7 +29,7 @@
         {
           "text": "销售管理",
           "icon": "&#xe63c;",
-          "href": "demo/login2.html"
+          "href": "demo/type.html"
         },
         {
           "text": "入库管理",
@@ -46,12 +46,12 @@
         {
           "text": "销售统计",
           "icon": "&#xe62c;",
-          "href": "demo/children.html"
+          "href": ""
         },
         {
           "text": "病因统计",
           "icon": "&#xe62c;",
-          "href": "demo/children.html"
+          "href": ""
         }
       ]
     },

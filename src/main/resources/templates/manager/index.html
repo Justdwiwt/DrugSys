@@ -25,17 +25,6 @@
             <button class="layui-btn layui-btn-small btn-nav"><i class="layui-icon">&#xe65f;</i></button>
         </div>
 
-        <!-- 顶部左侧添加选项卡监听 -->
-        <ul class="layui-nav" lay-filter="side-top-left">
-            <!--<li class="layui-nav-item"><a href="javascript:;" href-url="demo/btn.html"><i class="layui-icon">&#xe621;</i>按钮</a></li>
-            <li class="layui-nav-item">
-                <a href="javascript:;"><i class="layui-icon">&#xe621;</i>基础</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="javascript:;" href-url="demo/btn.html"><i class="layui-icon">&#xe621;</i>按钮</a></dd>
-                    <dd><a href="javascript:;" href-url="demo/form.html"><i class="layui-icon">&#xe621;</i>表单</a></dd>
-                </dl>
-            </li>-->
-        </ul>
 
         <!-- 顶部右侧添加选项卡监听 -->
         <ul class="layui-nav my-header-user-nav" lay-filter="side-top-right">
@@ -69,7 +58,8 @@
                 <li class="layui-nav-item  layui-nav-itemed">
                     <a href="javascript:;"><i class="layui-icon">&#xe620;</i>基础</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" href-url="demo/btn1.html"><i class="layui-icon">&#xe621;</i>按钮</a>
+                        <dd><a href="javascript:;" th:href="@{/manager/toUserMsgPage}" href-url="demo/btn1.html"><i
+                                class="layui-icon">&#xe621;</i>按钮</a>
                         </dd>
                         <dd><a href="javascript:;" href-url="demo/form.html"><i class="layui-icon">&#xe621;</i>表单</a>
                         </dd>
@@ -108,9 +98,6 @@
                         </dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a target="_blank"
-                                              href="//shang.qq.com/wpa/qunwpa?idkey=ad6ba602ae228be2222ddb804086e0cfa42da3d74e34b383b665c2bec1adfc6e"><i
-                        class="layui-icon">&#xe61e;</i>加入群下载源码</a></li>
             </ul>
 
         </div>

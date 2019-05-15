@@ -1,8 +1,13 @@
 package com.sxdxswxy.drugsys.controller;
 
+import com.sxdxswxy.drugsys.pojo.User;
+import com.sxdxswxy.drugsys.service.UserService;
+import com.sxdxswxy.drugsys.service.impl.UserServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
@@ -10,7 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.Date;
 import java.util.List;
@@ -19,6 +27,14 @@ import java.util.List;
 @Controller
 @RequestMapping("/")
 public class IndexController {
+
+    @Autowired
+    private UserServiceImpl userServiceImpl;
+
+    @RequestMapping("index")
+    public String toIndex() {
+        return "page/index";
+    }
 
     @RequestMapping("manager")
     public String toIndexPage() {
@@ -30,66 +46,53 @@ public class IndexController {
         return "manager/demo/welcome";
     }
 
-//    @RequestMapping("/login")
-//    public String login(@Valid LoginParam loginParam, BindingResult result, ModelMap model, HttpServletRequest request) {
-//        String errorMsg = "";
-//        if (result.hasErrors()) {
-//            List<ObjectError> list = result.getAllErrors();
-//            for (ObjectError error : list) {
-//                errorMsg = errorMsg + error.getCode() + "-" + error.getDefaultMessage() + ";";
-//            }
-//            model.addAttribute("errorMsg", errorMsg);
-//            return "login";
-//        }
-//        UserEntity user = userRepository.findByUserName(loginParam.getLoginName());
-//        if (user == null) {
-//            user = userRepository.findByEmail(loginParam.getLoginName());
-//        }
-//        if (user == null) {
-//            model.addAttribute("errorMsg", "用户名不存在!");
-//            return "login";
-//        } else if (!user.getPassword().equals(loginParam.getPassword())) {
-//            model.addAttribute("errorMsg", "密码错误！");
-//            return "login";
-//        }
-//
-//        request.getSession().setAttribute(WebConfiguration.LOGIN_KEY, user.getId());
-//        request.getSession().setAttribute(WebConfiguration.LOGIN_USER, user);
-//        return "redirect:/list";
-//    }
-//
-//    @RequestMapping("/register")
-//    public String register(@Valid RegisterParam registerParam, BindingResult result, ModelMap model) {
-//        logger.info("register param" + registerParam.toString());
-//        String errorMsg = "";
-//        if (result.hasErrors()) {
-//            List<ObjectError> list = result.getAllErrors();
-//            for (ObjectError error : list) {
-//                errorMsg = errorMsg + error.getCode() + "-" + error.getDefaultMessage() + ";";
-//            }
-//            model.addAttribute("errorMsg", errorMsg);
-//            return "register";
-//        }
-//        UserEntity u = userRepository.findByUserNameOrEmail(registerParam.getUserName(), registerParam.getEmail());
-//        if (u != null) {
-//            model.addAttribute("errorMsg", "用户已存在!");
-//            return "register";
-//        }
-//        UserEntity user = new UserEntity();
-//        BeanUtils.copyProperties(registerParam, user);
-//        user.setRegTime(new Date());
-//        user.setUserType("manage");
-//        user.setState("unverified");
-//        userRepository.save(user);
-//        logger.info("register user " + user.toString());
-//        return "login";
-//    }
-//
-//    @RequestMapping("/loginOut")
-//    public String loginOut(HttpServletRequest request) {
-//        request.getSession().removeAttribute(WebConfiguration.LOGIN_KEY);
-//        request.getSession().removeAttribute(WebConfiguration.LOGIN_USER);
-//        return "login";
-//    }
+    @RequestMapping("toLoginPage")
+    public String toLoginPage() {
+        return "page/signIn";
+    }
+
+    @RequestMapping("login")
+    public String doLogin(String loginName,
+                          String password, Model model,
+                          HttpServletRequest request,
+                          HttpServletResponse response) {
+        if ("".equals(loginName)) {
+            model.addAttribute("msg", "登录名不能为空");
+            return "page/signIn";
+        }
+        if ("".equals(password)) {
+            model.addAttribute("msg", "密码不能为空");
+            return "page/signIn";
+        }
+
+        User user = userServiceImpl.doLogin(loginName, password);
+        if (user != null) {
+            // 将用户登录信息加入cookie中
+            HttpSession session = request.getSession();
+            session.setMaxInactiveInterval(30 * 60);
+
+            session.setAttribute("user", user);
+            Cookie c = new Cookie("JSESSIONID", session.getId());
+            c.setMaxAge(60 * 30);
+            response.addCookie(c);
+            return "page/main";
+        }
+
+        model.addAttribute("msg", "登录名或密码错误");
+        return "page/main";
+    }
+
+    @RequestMapping("toRegisterPage")
+    public String toRegisterPage() {
+        return "page/signUp";
+    }
+
+    @RequestMapping("loginOut")
+    public String loginOut(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+        if (session != null)
+            session.invalidate();
+        return "page/index";
+    }
 
 }

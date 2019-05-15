@@ -57,7 +57,7 @@
             </button>
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
-                    <img alt="logo" src="../../static/img/W.png" class="fa fa-yahoo nav-logo">
+                    <img alt="logo" src="../../static/img/W.png" th:src="@{/img/W.png}" class="fa fa-yahoo nav-logo">
                     <!--<i class="fa fa-edge fa-2x" style="color: #fff"></i>-->
                 </a>
             </div>
@@ -75,40 +75,9 @@
                     </div>
                 </div>
             </form>
-            <ul class="nav navbar-nav">
-                <li><a href="#">功能<span class="sr-only">(current)</span></a></li>
-                <li><a href="#">功能</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">下拉
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">功能</a></li>
-                        <li><a href="#">功能</a></li>
-                        <li><a href="#">功能</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">功能</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">功能</a></li>
-                    </ul>
-                </li>
-            </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">功能</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">下拉
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">功能</a></li>
-                        <li><a href="#">功能</a></li>
-                        <li><a href="#">功能</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">功能</a></li>
-                    </ul>
-                </li>
+                <li><a th:href="@{/toLoginPage}">登录</a></li>
+                <li><a th:href="@{/toRegisterPage}">注册</a></li>
             </ul>
         </div>
     </div>
@@ -117,7 +86,7 @@
 <!--body start-->
 <div>
     <!--news1 start-->
-    <div style="height: 550px">
+    <div style="height: 500px">
         <!--carousel-->
         <div id="myCarousel" class="carousel slide" data-ride="carousel" style="top:0;z-index: -1;position: fixed">
             <ol class="carousel-indicators">
@@ -127,13 +96,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="../../static/img/carousel0.jpg" alt="First slide"/>
+                    <img src="../../static/img/carousel0.jpg" th:src="@{/img/carousel0.jpg}" alt="First slide"/>
                 </div>
                 <div class="item">
-                    <img src="../../static/img/carousel1.jpg" alt="Second slide"/>
+                    <img src="../../static/img/carousel1.jpg" th:src="@{/img/carousel1.jpg}" alt="Second slide"/>
                 </div>
                 <div class="item">
-                    <img src="../../static/img/carousel2.jpg" alt="Third slide"/>
+                    <img src="../../static/img/carousel2.jpg" th:src="@{/img/carousel2.jpg}" alt="Third slide"/>
                 </div>
             </div>
         </div>
