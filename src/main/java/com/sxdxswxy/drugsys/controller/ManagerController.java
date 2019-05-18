@@ -11,37 +11,37 @@ public class ManagerController {
 
     @RequestMapping("/toUserMsgPage")
     public String toUserMsgPage() {
-        return "demo/btn";
+        return "manager/demo/btn";
     }
 
     @RequestMapping("/toUserControll")
     public String toUserControll() {
-        return "demo/btn";
+        return "manager/demo/btn";
     }
 
     @RequestMapping("/toTypePage")
     public String toTypePage() {
-        return "demo/btn";
+        return "manager/demo/btn";
     }
 
     @RequestMapping("/toSellPage")
     public String toSellPage() {
-        return "demo/btn";
+        return "manager/demo/btn";
     }
 
     @RequestMapping("/toStoragePage")
     public String toStoragePage() {
-        return "demo/btn";
+        return "manager/demo/btn";
     }
 
     @RequestMapping("/toSellTotalPage")
     public String toSellTotalPage() {
-        return "demo/btn";
+        return "manager/demo/btn";
     }
 
     @RequestMapping("/toOtherTotalPage")
     public String toOtherTotalPage() {
-        return "demo/btn";
+        return "manager/demo/btn";
     }
 
 }

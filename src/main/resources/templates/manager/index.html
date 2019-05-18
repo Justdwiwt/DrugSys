@@ -56,47 +56,42 @@
             <!-- 左侧主菜单添加选项卡监听 -->
             <ul class="layui-nav layui-nav-tree" lay-filter="side-main">
                 <li class="layui-nav-item  layui-nav-itemed">
-                    <a href="javascript:;"><i class="layui-icon">&#xe620;</i>基础</a>
+                    <a href="javascript:;"><i class="layui-icon">&#xe770;</i>用户管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" th:href="@{/manager/toUserMsgPage}" href-url="demo/btn1.html"><i
-                                class="layui-icon">&#xe621;</i>按钮</a>
+                        <dd><a href="javascript:;" th:href="@{/manager/toUserMsgPage}"
+                               data-skip-view="manager/demo/type.html" onclick="skipPage(this)"
+                               href-url="demo/type.html">
+                            <i class="layui-icon">&#xe63c;</i>用户信息</a>
                         </dd>
-                        <dd><a href="javascript:;" href-url="demo/form.html"><i class="layui-icon">&#xe621;</i>表单</a>
-                        </dd>
-                        <dd><a href="javascript:;" href-url="demo/table.html"><i class="layui-icon">&#xe621;</i>表格</a>
-                        </dd>
-                        <dd><a href="javascript:;" href-url="demo/tab-card.html"><i
-                                class="layui-icon">&#xe621;</i>选项卡</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/progress-bar.html"><i class="layui-icon">&#xe621;</i>进度条</a>
-                        </dd>
-                        <dd><a href="javascript:;" href-url="demo/folding-panel.html"><i class="layui-icon">&#xe621;</i>折叠面板</a>
-                        </dd>
-                        <dd><a href="javascript:;" href-url="demo/auxiliar.html"><i class="layui-icon">&#xe621;</i>辅助元素</a>
+                        <dd><a href="javascript:;" th:href="@{/manager/toUserControll}" href-url="demo/type.html">
+                            <i class="layui-icon">&#xe631;</i>权限设置</a>
                         </dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;"><i class="layui-icon">&#xe628;</i>扩展</a>
+                    <a href="javascript:;"><i class="layui-icon">&#xe628;</i>药品管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" href-url="demo/login.html"><i class="layui-icon">&#xe670;</i>登录页</a>
+                        <dd><a href="javascript:;" th:href="@{/manager/toTypePage}" href-url="demo/type.html">
+                            <i class="layui-icon">&#xe63c;</i>类别管理</a>
                         </dd>
-                        <dd><a href="javascript:;" href-url="demo/register.html"><i
-                                class="layui-icon">&#xe621;</i>注册页</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/login2.html"><i
-                                class="layui-icon">&#xe621;</i>登录页2</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/map.html"><i class="layui-icon">&#xe621;</i>图表</a>
-                        </dd>
-                        <dd><a href="javascript:;" href-url="demo/add-edit.html"><i class="layui-icon">&#xe621;</i>添加-修改</a>
-                        </dd>
-                        <dd><a href="javascript:;" href-url="demo/data-table.html"><i class="layui-icon">&#xe621;</i>data-table
-                            表格页</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/tree-table.html"><i class="layui-icon">&#xe621;</i>Tree
-                            table树表格页</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/404.html"><i class="layui-icon">&#xe621;</i>404页</a>
-                        </dd>
-                        <dd><a href="javascript:;" href-url="demo/tips.html"><i class="layui-icon">&#xe621;</i>提示页</a>
-                        </dd>
+                        <dd><a href="javascript:;" th:href="@{/manager/toSellPage}" href-url="demo/type.html">
+                            <i class="layui-icon">&#xe63c;</i>销售管理</a></dd>
+                        <dd><a href="javascript:;" th:href="@{/manager/toStoragePage}" href-url="demo/type.html">
+                            <i class="layui-icon">&#xe63c;</i>入库管理</a></dd>
                     </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="layui-icon">&#xe629;</i>数据统计</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" th:href="@{/manager/toSellTotalPage}" href-url="demo/map.html">
+                            <i class="layui-icon">&#xe62c;</i>销售统计</a>
+                        </dd>
+                        <dd><a href="javascript:;" th:href="@{/manager/toOtherTotalPage}" href-url="demo/map.html">
+                            <i class="layui-icon">&#xe62c;</i>病因统计</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="layui-icon">&#xe609;</i>消息发布</a>
                 </li>
             </ul>
 
@@ -159,12 +154,24 @@
         // 顶部左侧菜单生成 [请求地址,过滤ID,是否展开,携带参数]
         vipNav.top_left('./json/nav_top_left.json', 'side-top-left', false);
         // 主体菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-        vipNav.main('./json/nav_main.json', 'side-main', true);
-
-        // you code ...
-
+        // vipNav.main('./json/nav_main.json', 'side-main', true);
 
     });
+
+    function skipPage(obj) {
+        var href = $(obj).attr("href");
+        var pageName = $(obj).attr("data-skip-view");
+        var data = {"viewName": pageName};
+        $.ajax({
+            url: href,
+            data: data,
+            type: "post",
+            success: function (data) {
+                $("#right").html(data);
+            }
+        });
+
+    }
 </script>
 </body>
 </html>
